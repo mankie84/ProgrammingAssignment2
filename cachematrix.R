@@ -1,12 +1,12 @@
 ## makeCacheMatrix caches a matrix object and list of functions that 
-allow to store the inverse and re-set the original objext. CacheSolve 
-computes the inverse of that matrix and caches the result.
+## allow to store the inverse and re-set the original objext. CacheSolve 
+## computes the inverse of that matrix and caches the result.
 
 ## makeCacheMatrix takes arguments which define a matrix, in accordance 
-with the R <matrix> function conventions (z=vector of content for 
-matrix, x=number of rows, y= number of columns). The function checks 
-that the arguments form an invertible matrix and cache it. Additional 
-comments arer included at the end of each line of code.
+## with the R <matrix> function conventions (z=vector of content for 
+## matrix, x=number of rows, y= number of columns). The function checks 
+## that the arguments form an invertible matrix and cache it. Additional 
+## comments arer included at the end of each line of code.
 
 makeCacheMatrix <- function(z = numeric(), x = numeric(), y = numeric()) 
 {
@@ -42,8 +42,8 @@ list(set = set, get = get,				## put all functions into a neat list
 
 
 ## cacheSolve computes the inverse of a matrix object passed to it as 
-argument. It then stores the result and pulls it from cache if re-invoked. Additional 
-comments included at the end of each line of code.
+## argument. It then stores the result and pulls it from cache if re-invoked. Additional 
+## comments included at the end of each line of code.
 
 cacheSolve <- function(x, ...) {
         inv <- x$getinverse()					## pull <inv> out of the functions list
